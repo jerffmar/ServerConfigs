@@ -35,3 +35,12 @@ sudo systemctl enable docker
 
 # Add user to Docker group
 sudo usermod -aG docker $USER
+
+# Prompt user if they want to reboot
+read -p "Do you want to reboot now? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  sudo reboot
+fi
+
+
