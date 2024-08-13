@@ -33,6 +33,15 @@ sudo docker run hello-world
 sudo systemctl start docker
 sudo systemctl enable docker
 
+# Install and enable UFW
+
+sudo apt install -y ufw
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 443
+sudo ufw allow 3000
+sudo ufw enable
+
 # Add user to Docker group
 sudo usermod -aG docker $USER
 
