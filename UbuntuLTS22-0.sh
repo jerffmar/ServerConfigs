@@ -5,7 +5,7 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt-get update -y
 sudo apt-get upgrade -y
-
+#
 # Remove old Docker and conflicting packages
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 
@@ -51,5 +51,6 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo reboot
 fi
+
 
 
